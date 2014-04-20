@@ -1,0 +1,24 @@
+{
+  "name": "pretty-calendar",
+	"title": "Pretty Calendar",
+	"description": "Pretty Calendar can generate beautiful jQuery calendars with just a few lines of code.",
+	"keywords": ["calendar", "week", "day"],
+	"version": "1.1.0",
+    "author": {
+        "name": "Neel Somani",
+        "url": "http://www.apptic.me/"
+    },
+	"licenses": [
+		{
+			"type": "GPLv2",
+			"url": "http://www.example.com/licenses/gpl.html"
+		}
+	],
+	"homepage": "http://www.apptic.me/projects/calendar/",
+	"docs": "http://www.apptic.me/blog/making-pretty-calendars-with-jquery.php",
+	"demo": "http://www.apptic.me/projects/calendar/test.php",
+	"download": "https://github.com/AppticLLC/pretty-calendar",
+	"dependencies": {
+		"jquery": ">=1.5"
+	}
+}
