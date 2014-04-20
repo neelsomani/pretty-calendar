@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Demo - PrettyCalendar</title>
+<link rel="stylesheet" type="text/css" href="http://www.apptic.me/projects/calendar/custom-calendar.css">
+<link rel="stylesheet" type="text/css" href="http://www.apptic.me/projects/calendar/pretty-calendar-minified.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://www.apptic.me/projects/calendar/pretty-calendar-minified.js"></script>
+</head>
+<body>
+<nav><a href="http://www.apptic.me/projects/calendar/">PrettyCalendar v1.1</a></nav>
+<div id="navWrap"></div>
+<script>
+
+/*
+*
+* STANDARD EVENT ARRAY - ONE ARRAY WHICH CONTAINS INDIVIDUAL EVENT ARRAYS
+* INDIVIDUAL EVENTS ARRAYS CONTAIN STRINGS W/ THE FOLLOWING:
+* [dayOfWeek, standardTime, eventTitle, backgroundColor]
+*
+*/
+
+var events = [];
+events[0] = [];
+events[0][0] = "Sunday";
+events[0][1] = "3:00pm";
+events[0][2] = "Just a sample event"
+events[0][3] = "#c0c0c0";
+events[1] = [];
+events[1][0] = "Monday";
+events[1][1] = "12:00pm";
+events[1][2] = "Another event"
+events[1][3] = "#8FD8D8";
+events[2] = [];
+events[2][0] = "Thursday";
+events[2][1] = "5:00pm";
+events[2][2] = "This is what happens when"
+events[2][3] = "orange";
+events[3] = [];
+events[3][0] = "Thursday";
+events[3][1] = "5:30pm";
+events[3][2] = "two events are side by side"
+events[3][3] = "purple";
+
+/*
+*
+* YOU CAN PASS AN ARRAY OF CUSTOM LABELS FOR EACH DAY
+* BUT PRETTYCALENDAR DEFAULTS TO THE NAMES OF EACH DAY
+*
+*/
+
+var weekday=new Array(7);
+weekday[0]="Sun (Apr 13)";
+weekday[1]="Mon (Apr 14)";
+weekday[2]="Tue (Apr 15)";
+weekday[3]="Wed (Apr 16)";
+weekday[4]="Thu (Apr 17)";
+weekday[5]="Fri (Apr 18)";
+weekday[6]="Sat (Apr 19)";
+
+/*
+*
+* PrettyCalendar(eventArray, nameOfCalendarDiv, enableNavigation, customLabelArray)
+* NAVIGATION HOOKS ARE function leftNav() AND function rightNav()
+* IT IS UP TO YOU TO DEFINE THESE
+*
+*/
+
+var prettyCal = new PrettyCalendar(events, "navWrap", false, weekday);
+
+prettyCal.addFooter('&copy; 2014 by <a href="http://www.apptic.me/blog/making-pretty-calendars-with-jquery.php" style="text-decoration:none;">Apptic LLC</a>');
+</script>
+</body>
+</html>
