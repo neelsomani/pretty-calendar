@@ -176,16 +176,18 @@ function initTransitions() {
                 });
             } else {
                 transition = true;
-                $(".day").not("#day7").css("display", "block");
-                $("#day7").not(this).css("display", "none");
+                $(".day").css("display", "block");
                 weekView = true;
-                $(".day").animate({
+                $(".day").not(this).animate({
                     width: "14.28%",
                 }, 1000, function() {
                     $(".day").css("min-width", "100px");
-                    $("#day7").css("display", "block");
                     transition = false;
                 });
+                $(this).animate({
+                    width: "14.28%",
+                }, 970);
+                    
             }
         }
     });
