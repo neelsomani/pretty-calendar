@@ -169,8 +169,8 @@ PrettyCalendar.populateEvents = function (eventsToday) {
     }
 }
 
-PrettyCalendar.prototype.updateEvents = function (events) {
-    $("#" + this.wrappingDiv).empty();
+PrettyCalendar.updateEvents = function (events) {
+    $(".event").remove();
     PrettyCalendar.commitEvents(events);
 }
 
