@@ -1,6 +1,7 @@
 PrettyCalendar.prototype.weekView = true;
 PrettyCalendar.prototype.transition = false;
 PrettyCalendar.UNDEFINED_TIME = -2;
+PrettyCalendar.EVENT_PADDING = 10;
 PrettyCalendar.prototype.wrappingDiv;
 
 function PrettyCalendar(events, divToPut, navigation, customLabels) {
@@ -139,7 +140,7 @@ PrettyCalendar.populateEvents = function (eventsToday) {
             var timeHours = PrettyCalendar.timeToHours(eventsToday[j][i][0]);
             var percentTemp = PrettyCalendar.hoursToPercent(timeHours);
             var lastPercentTemp = PrettyCalendar.hoursToPercent(lastTime);
-            if ($("#calendar").height() * lastPercentTemp / 100 + $("#event" + (counterTemp - 1)).innerHeight() > $("#calendar").height() * percentTemp / 100) {
+            if ($("#calendar").height() * lastPercentTemp / 100 + $("#event" + (counterTemp - 1)).innerHeight() + PrettyCalendar.EVENT_PADDING > $("#calendar").height() * percentTemp / 100) {
                 numToCompress++;
             } else {
                 numToCompress = 1;
@@ -166,6 +167,11 @@ PrettyCalendar.populateEvents = function (eventsToday) {
             $("#day" + (j + 1)).append(eventTempDiv);
         }
     }
+}
+
+PrettyCalendar.prototype.updateEvents = function (events) {
+    $("#" + this.wrappingDiv).empty();
+    PrettyCalendar.commitEvents(events);
 }
 
 PrettyCalendar.prototype.initTransitions = function () {
