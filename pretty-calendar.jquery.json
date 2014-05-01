@@ -3,7 +3,7 @@
 	"title": "Pretty Calendar",
 	"description": "Pretty Calendar can generate beautiful jQuery calendars with just a few lines of code.",
 	"keywords": ["calendar", "week", "day"],
-	"version": "1.1.1",
+	"version": "1.2.0",
     "author": {
         "name": "Neel Somani",
         "url": "http://www.apptic.me/"
