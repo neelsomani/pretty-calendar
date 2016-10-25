@@ -43,7 +43,7 @@
     position: relative;
     top: 0;
     width: 14.28%;
-    min-width: 100px;
+    /* min-width: 100px; */
     float: left;
     outline: 1px solid #eee;
 }
