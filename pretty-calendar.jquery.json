@@ -6,17 +6,17 @@
 	"version": "1.2.0",
     "author": {
         "name": "Neel Somani",
-        "url": "http://www.apptic.me/"
+        "url": "https://www.apptic.me/"
     },
 	"licenses": [
 		{
-			"type": "GPLv2",
-			"url": "http://www.example.com/licenses/gpl.html"
+			"type": "CC BY-SA 4.0",
+			"url": "https://creativecommons.org/licenses/by-sa/4.0/"
 		}
 	],
-	"homepage": "http://www.apptic.me/projects/calendar/",
-	"docs": "http://www.apptic.me/blog/making-pretty-calendars-with-jquery.php",
-	"demo": "http://www.apptic.me/projects/calendar/test.php",
+	"homepage": "https://www.apptic.me/projects/calendar/",
+	"docs": "https://www.apptic.me/blog/making-pretty-calendars-with-jquery.php",
+	"demo": "https://www.apptic.me/projects/calendar/test.php",
 	"download": "https://github.com/AppticLLC/pretty-calendar",
 	"dependencies": {
 		"jquery": ">=1.5"
